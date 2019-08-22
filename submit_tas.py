@@ -41,7 +41,7 @@ def submit_request(data, cookies={}):
 
 def round_timedelta(td_to_round):
     rounded_td = round(td_to_round / td(minutes=15)) * td(minutes=15)
-    residual = td_to_round - rounded_td
+    residual = rounded_td - td_to_round
     return (rounded_td, residual)
 
 def round_datetime(datetime_to_round):
